@@ -8,7 +8,14 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
 	 <!-- 扫描包路径 -->
     <context:component-scan base-package="blog.controller"></context:component-scan>
-    
+     <!-- 拦截器 -->  
+        <mvc:interceptors>  
+            <!-- 多个拦截器，顺序执行 -->  
+            <mvc:interceptor>  
+                <mvc:mapping path="/**"/>  
+                <bean class="blog.interceptor.Logininterceptor"></bean>  
+            </mvc:interceptor>  
+        </mvc:interceptors>  
     <!-- 视图映射设定 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix" value="/pages/"></property>
