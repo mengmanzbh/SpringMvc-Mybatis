@@ -45,9 +45,9 @@ public class Logininterceptor extends HandlerInterceptorAdapter {
 //            return true;  
 //        }  
 //        //不符合条件的，跳转到登录界面  
-//        request.getRequestDispatcher("/WEB-INF/jsp/login.jsp").forward(request, response);  
+//        request.getRequestDispatcher("/webapp/pages/login.jsp").forward(request, response);  
 //          
-//        return false;  
-    	return true;
+        return false;  
+    	
     }  
 }

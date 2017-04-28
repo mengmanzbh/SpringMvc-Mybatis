@@ -36,7 +36,7 @@ import blog.service.imp.UserService;
  * create by Liujishuai on 2015年9月21日
  */
 @Controller("userController")
-// @RequestMapping("/user")
+@RequestMapping("/user")
 public class UserController extends BaseController {
 	@Autowired
 	private IUserService userService;
